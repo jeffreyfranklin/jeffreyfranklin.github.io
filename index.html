@@ -7,124 +7,7 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-    
-* {
-  box-sizing: border-box;
-}
-
-/* Create two equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 50%;
-  padding: 10px;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.image {
-   max-width: 100%;
-}
-
-/* Create two equal columns that floats next to each other */
-.imageColumn {
-  float: left;
-  width: 33.33%;
-  padding: 10px;
-}
-
-/* Clear floats after the columns */
-.imageRow:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-    
-body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
-body, html {
-  height: 100%;
-  color: black;
-  line-height: 1.8;
-}
-
-/* Create a Parallax Effect */
-.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5 {
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-/* First image (Logo. Full height) */
-.bgimg-1 {
-  background-image: url('/images/Header%20Image.jpeg');
-  min-height: 100%;
-}
-
-/* Second image (Arcade Race) */
-.bgimg-2 {
-  background-image: url("/images/Arcade%20Car/Track.PNG");
-  min-height: 450px;
-}
-
-/* Third image (First-Person Shooter) */
-.bgimg-3 {
-  background-image: url("/images/First-Person%20Shooter/Everything.PNG");
-  min-height: 450px;
-}
-
-/* Third image (Platformer) */
-.bgimg-4 {
-  background-image: url("/images/Platformer/First%20CutScene.PNG");
-  min-height: 450px;
-}
-
-/* Third image (Contact) */
-.bgimg-5 {
-  background-image: url("/images/GameDesigner.webp");
-  min-height: 450px;
-}
-    
-/* Style buttons */
-.btn {
-  background-color: DodgerBlue;
-  border: none;
-  color: white;
-  padding: 12px 30px;
-  cursor: pointer;
-  font-size: 20px;
-}
-
-/* Darker background on mouse-over */
-.btn:hover {
-  background-color: RoyalBlue;
-}
-
-.w3-wide {letter-spacing: 5px;}
-.w3-hover-opacity {cursor: pointer;}
-    
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-  }
-  .imageColumn {
-    width: 100%;
-  }
-}
-
-/* Turn off parallax scrolling for tablets and phones */
-@media only screen and (max-device-width: 1600px) {
-  .bgimg-1, .bgimg-2, .bgimg-3 {
-    background-attachment: scroll;
-    min-height: 400px;
-  }
-}
-</style>
+<link rel="stylesheet" href="main.css">
 </head>
 <body>
 
@@ -148,8 +31,8 @@ body, html {
   </div>
 </div>
 
-<!-- First Parallax Image with Logo Text -->
-<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+<!-- Parallax Image with Logo Text -->
+<div class="bgimg-logo w3-display-container w3-opacity-min" id="home">
   <div class="w3-display-middle" style="white-space:nowrap;">
     <span class="w3-center w3-padding-large w3-xlarge w3-wide w3-animate-opacity w3-hide-small w3-hide-medium" style="background-color: gray; color: white; text-shadow: 2px 2px black;">Jeffrey Franklin - Game Design Portfolio</span>
     <span class="w3-center w3-padding-large w3-xlarge w3-wide w3-animate-opacity w3-hide-small w3-hide-large" style="background-color: gray; color: white; text-shadow: 2px 2px black;">Jeffrey Franklin - Portfolio</span>
@@ -201,13 +84,49 @@ body, html {
     Spoken Languages
   </div>
   <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">3</span><br>
+    <span class="w3-xlarge">4</span><br>
     Projects Done
   </div>
 </div>
 
+<!-- Project A Parallax Image with Text -->
+<div style="border-top: 10px solid black;">
+    <div class="bgimg-houseparty w3-display-container w3-opacity-min">
+      <div class="w3-display-middle">
+        <span class="w3-padding-large w3-xxlarge w3-wide w3-hide-small" style="background-color: gray; color: white; text-shadow: 2px 2px black; white-space:nowrap;">PROJECT A</span>
+        <span class="w3-xxlarge w3-wide w3-hide-medium w3-hide-large" style="background-color: gray; color: white; text-shadow: 2px 2px black; white-space:nowrap; letter-spacing: 1.5px; padding: 12px 12px">PROJECT A</span>
+      </div>
+    </div>
+</div>
+
+<!-- Container (Project A Section) -->
+ <div class="w3-black imageRow" style="background-color: black;">
+     <div class="imageColumn"><img class="image" src="images/House-Party/PickUp.PNG"></div>
+     <div class="imageColumn"><img class="image" src="images/House-Party/Melee.png"></div>
+     <div class="imageColumn"><img class="image" src="images/House-Party/Roof.PNG"></div>
+ </div>
+<div class="w3-content w3-container w3-padding-64">
+  <h3 class="w3-center">A team project, my contributions to this multiplayer party game include:</h3>
+  <h3 class="w3-center">
+      <ul style="text-align: left; list-style: inside; display: inline-block;">
+          <li>Networking using Mirror</li>
+          <li>Object pick-up, throwing and dragging</li>
+          <li>Breakable objects</li>
+          <li>Player vs player combat</li>
+          <li>Player knockback</li>
+          <li>General, control and graphics options</li>
+          <li>Real-time scoreboards</li>
+          <li>Item spawning</li>
+      </ul>
+  </h3>
+</div>
+<video width="67.5%" controls style="display: block; margin-left: auto; margin-right: auto; margin-bottom: 64px; padding: 3px; background-color: black;">
+  <source src="videos/NightLabStudios_ProjectA_Trailer.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+    
 <!-- Arcade Race Parallax Image with Text -->
-<div class="bgimg-2 w3-display-container w3-opacity-min" id="portfolio">
+<div class="bgimg-arcaderace w3-display-container w3-opacity-min" id="portfolio">
   <div class="w3-display-middle">
     <span class="w3-padding-large w3-xxlarge w3-hide-small w3-hide-medium" style="background-color: gray; color: white; text-shadow: 2px 2px black; white-space:nowrap;">ARCADE RACE DEMO</span>
     <span class="w3-padding-large w3-xxlarge w3-hide-small w3-hide-large" style="background-color: gray; color: white; text-shadow: 2px 2px black; white-space:nowrap;">RACE DEMO</span>
@@ -241,7 +160,7 @@ body, html {
 
 <!-- First-Person Shooter Parallax Image with Text -->
 <div style="border-top: 10px solid black;">
-    <div class="bgimg-3 w3-display-container w3-opacity-min">
+    <div class="bgimg-shooter w3-display-container w3-opacity-min">
       <div class="w3-display-middle">
         <span class="w3-padding-large w3-xxlarge w3-wide w3-hide-small w3-hide-medium" style="background-color: gray; color: white; text-shadow: 2px 2px black; white-space:nowrap;">FIRST-PERSON SHOOTER DEMO</span>
         <span class="w3-padding-large w3-xxlarge w3-wide w3-hide-small w3-hide-large" style="background-color: gray; color: white; text-shadow: 2px 2px black; white-space:nowrap;">FPS DEMO</span>
@@ -278,7 +197,7 @@ body, html {
 
 <!-- Platformer Parallax Image with Text -->
 <div style="border-top: 10px solid black;">
-    <div class="bgimg-4 w3-display-container w3-opacity-min">
+    <div class="bgimg-platformer w3-display-container w3-opacity-min">
       <div class="w3-display-middle">
         <span class="w3-padding-large w3-xxlarge w3-wide w3-hide-small" style="background-color: gray; color: white; text-shadow: 2px 2px black; white-space:nowrap;">PLATFORMER DEMO</span>
         <span class="w3-xxlarge w3-wide w3-hide-medium w3-hide-large" style="background-color: gray; color: white; text-shadow: 2px 2px black; white-space:nowrap; letter-spacing: 1.5px; padding: 12px 12px">PLATFORMER DEMO</span>
@@ -286,7 +205,7 @@ body, html {
     </div>
 </div>
 
-<!-- Container (First-Person Shooter Section) -->
+<!-- Container (Platformer Section) -->
  <div class="w3-black imageRow" style="background-color: black;">
      <div class="imageColumn"><img class="image" src="images/Platformer/First%20Level.PNG"></div>
      <div class="imageColumn"><img class="image" src="images/Platformer/Enemy.PNG"></div>
@@ -311,9 +230,9 @@ body, html {
   Your browser does not support the video tag.
 </video>
 
-<!-- Fifth Parallax Image with Portfolio Text -->
+<!-- Contact Parallax Image with Text -->
 <div style="border-top: 10px solid black; border-bottom: 10px solid black;" id="contact">
-    <div class="bgimg-5 w3-display-container w3-opacity-min">
+    <div class="bgimg-contact w3-display-container w3-opacity-min">
       <div class="w3-display-middle">
          <span class="w3-padding-large w3-xxlarge w3-wide w3-hide-small" style="background-color: gray; color: white; text-shadow: 2px 2px black; white-space:nowrap;">CONTACT</span>
          <span class="w3-xxlarge w3-wide w3-hide-medium w3-hide-large" style="background-color: gray; color: white; text-shadow: 2px 2px black; white-space:nowrap; letter-spacing: 1.5px; padding: 12px 12px">CONTACT</span>
