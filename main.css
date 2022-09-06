@@ -5,6 +5,38 @@
   box-sizing: border-box;
 }
 
+.not-small {
+  background-color: gray;
+  color: white;
+  text-shadow: 2px 2px black;
+  white-space: nowrap;
+}
+
+.small {
+  background-color: gray;
+  color: white;
+  text-shadow: 2px 2px black;
+  white-space:nowrap;
+  letter-spacing: 1.5px;
+  padding: 12px 12px;
+}
+
+.section {
+  border-top: 10px solid black;
+}
+
+.content {
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content ul {
+  text-align: left;
+  list-style: inside;
+  display: inline-block;
+}
+
 /* Create two equal columns that floats next to each other */
 .column {
   float: left;
@@ -50,6 +82,15 @@ body, html {
   height: 100%;
   color: black;
   line-height: 1.8;
+}
+
+video {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 64px;
+    padding: 3px;
+    background-color: black;
 }
 
 /* Create a Parallax Effect */
@@ -104,6 +145,9 @@ body, html {
   padding: 12px 30px;
   cursor: pointer;
   font-size: 20px;
+  margin-left: inherit;
+  margin-right: auto;
+  text-decoration: none;
 }
 
 /* Darker background on mouse-over */
