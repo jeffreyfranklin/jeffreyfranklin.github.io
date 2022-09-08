@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Jeffrey Franklin - Game Design Portfolio</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="main.css">
+    <title>Jeffrey Franklin - Game Design Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/parallax.css">
+    <link rel="stylesheet" href="styles/rows-and-columns.css">
 </head>
 <body>
 
@@ -31,7 +33,7 @@
   </div>
 </div>
 
-<!-- Parallax Image with Logo Text -->
+<!-- Parallax Image (Logo) -->
 <div class="bgimg-logo w3-display-container w3-opacity-min" id="home">
   <div class="w3-display-middle">
     <span class="w3-center w3-padding-large w3-xlarge w3-wide w3-animate-opacity w3-hide-small w3-hide-medium not-small">Jeffrey Franklin - Game Design Portfolio</span>
@@ -40,8 +42,8 @@
   </div>
 </div>
 
-<!-- Container (About Section) -->
-<div class="w3-content w3-container w3-padding-64" id="about">
+<!-- Content (About Section) -->
+<div class="w3-content w3-container w3-padding-32" id="about">
   <h3 class="w3-center w3-xxlarge">ABOUT ME</h3>
   <h4 class="w3-center"><em>I am a game designer</em></h4>
   <h4>My name is Jeffrey Franklin, and I am in my final year of a Bachelor’s degree in Computer Science with a Specialization in Game Design from Laurentian University. I have always been passionate about video games and what goes into the creation of various genres of video games. This passion has drawn me to creating some games of my own and looking to start a career as a game designer and developer.</h4>
@@ -69,7 +71,7 @@
         </div>
     </div>
 </div>
-
+<!-- Footer (About Section) -->
 <div class="w3-row w3-center w3-black w3-padding-16">
   <div class="w3-quarter w3-section">
     <span class="w3-xlarge">4</span><br>
@@ -89,7 +91,7 @@
   </div>
 </div>
 
-<!-- Project A Parallax Image with Text -->
+<!-- Parallax Image (Project A Section) -->
 <div class="section">
     <div class="bgimg-houseparty w3-display-container w3-opacity-min">
       <div class="w3-display-middle">
@@ -98,67 +100,77 @@
       </div>
     </div>
 </div>
-
-<!-- Container (Project A Section) -->
- <div class="w3-black imageRow">
-     <div class="imageColumn"><img class="image" src="images/House-Party/PickUp.PNG"></div>
-     <div class="imageColumn"><img class="image" src="images/House-Party/Melee.png"></div>
-     <div class="imageColumn"><img class="image" src="images/House-Party/Roof.PNG"></div>
- </div>
-<div class="content w3-container w3-padding-32">
-  <h3 class="w3-center">A team project, my contributions to this multiplayer party game include:</h3>
-  <h3 class="w3-center">
-      <ul>
-          <li>Networking using Mirror</li>
-          <li>Object pick-up, throwing and dragging</li>
-          <li>Breakable objects</li>
-          <li>Player vs player combat</li>
-          <li>Player knockback</li>
-          <li>General, control and graphics options</li>
-          <li>Real-time scoreboards</li>
-          <li>Item spawning</li>
-      </ul>
-  </h3>
+<!-- Image Row (Project A Section) -->
+<div class="w3-black imageRow">
+    <div class="imageColumn"><img class="image" src="images/House-Party/PickUp.PNG"></div>
+    <div class="imageColumn"><img class="image" src="images/House-Party/Melee.png"></div>
+    <div class="imageColumn"><img class="image" src="images/House-Party/Roof.PNG"></div>
 </div>
-<video width="67.5%" controls>
-  <source src="videos/NightLabStudios_ProjectA_Trailer.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+<!-- Content (Project A Section) -->
+<div class="content w3-container w3-padding-16">
+  <h3 class="w3-center w3-padding-16">A team project, my contributions to this multiplayer party game include:</h3>
+    <div class="contentRow">
+        <div class="contentColumn contentLeft">
+            <h3 class="w3-center">
+              <ul>
+                  <li>Networking using Mirror</li>
+                  <li>Object pick-up, throwing and dragging</li>
+                  <li>Breakable objects</li>
+                  <li>Player vs player combat</li>
+                  <li>Player knockback</li>
+                  <li>General, control and graphics options</li>
+                  <li>Real-time scoreboards</li>
+                  <li>Item spawning</li>
+              </ul>
+            </h3>
+        </div>
+        <video class="contentColumn contentRight" controls>
+          <source src="videos/NightLabStudios_ProjectA_Trailer.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+    </div>
+</div>
     
-<!-- Arcade Race Parallax Image with Text -->
-<div class="bgimg-arcaderace w3-display-container w3-opacity-min" id="portfolio">
-  <div class="w3-display-middle">
-    <span class="w3-padding-large w3-xxlarge w3-hide-small w3-hide-medium not-small">ARCADE RACE DEMO</span>
-    <span class="w3-padding-large w3-xxlarge w3-hide-small w3-hide-large not-small">RACE DEMO</span>
-    <span class="w3-xxlarge w3-hide-medium w3-hide-large small">RACE DEMO</span>
-  </div>
+<!-- Parallax Image (Arcade Race Section) -->
+<div class="section">
+    <div class="bgimg-arcaderace w3-display-container w3-opacity-min" id="portfolio">
+      <div class="w3-display-middle">
+        <span class="w3-padding-large w3-xxlarge w3-hide-small w3-hide-medium not-small">ARCADE RACE DEMO</span>
+        <span class="w3-padding-large w3-xxlarge w3-hide-small w3-hide-large not-small">RACE DEMO</span>
+        <span class="w3-xxlarge w3-hide-medium w3-hide-large small">RACE DEMO</span>
+      </div>
+    </div>
+</div>
+<!-- Image Row (Arcade Race Section) -->
+<div class="w3-black imageRow">
+    <div class="imageColumn"><img class="image" src="images/Arcade%20Car/Cars.PNG"></div>
+    <div class="imageColumn"><img class="image" src="images/Arcade%20Car/Drift.PNG"></div>
+    <div class="imageColumn"><img class="image" src="images/Arcade%20Car/Jump.PNG"></div>
+</div>
+<!-- Content (Arcade Race Section) -->
+<div class="content w3-container w3-padding-16">
+  <h3 class="w3-center w3-padding-16">A personal project of mine, this third-person racing game’s concepts include:</h3>
+    <div class="contentRow">
+        <div class="contentColumn contentLeft">
+            <h3 class="w3-center">
+              <ul>
+                  <li>Real-time position tracking</li>
+                  <li>Checkpoint system</li>
+                  <li>AI racers capable of human performance</li>
+                  <li>Dynamic camera</li>
+                  <li>Bindable controls with controller support</li>
+                  <li>Race and lap timer</li>
+              </ul>
+            </h3>
+        </div>
+        <video class="contentColumn contentRight" controls>
+          <source src="videos/Arcade%20Car%20Gameplay.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+    </div>
 </div>
 
-<!-- Container (Arcade Race Section) -->
- <div class="w3-black imageRow">
-     <div class="imageColumn"><img class="image" src="images/Arcade%20Car/Cars.PNG"></div>
-     <div class="imageColumn"><img class="image" src="images/Arcade%20Car/Drift.PNG"></div>
-     <div class="imageColumn"><img class="image" src="images/Arcade%20Car/Jump.PNG"></div>
- </div>
-<div class="content w3-container w3-padding-32">
-  <h3 class="w3-center">A personal project of mine, this third-person racing game’s concepts include:</h3>
-  <h3 class="w3-center">
-      <ul>
-          <li>Real-time position tracking</li>
-          <li>Checkpoint system</li>
-          <li>AI racers capable of human performance</li>
-          <li>Dynamic camera</li>
-          <li>Bindable controls with controller support</li>
-          <li>Race and lap timer</li>
-      </ul>
-  </h3>
-</div>
-<video width="67.5%" controls>
-  <source src="videos/Arcade%20Car%20Gameplay.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-
-<!-- First-Person Shooter Parallax Image with Text -->
+<!-- Parallax Image (First-Person Shooter Section) -->
 <div class="section">
     <div class="bgimg-shooter w3-display-container w3-opacity-min">
       <div class="w3-display-middle">
@@ -168,34 +180,38 @@
       </div>
     </div>
 </div>
-
-<!-- Container (First-Person Shooter Section) -->
- <div class="w3-black imageRow">
-     <div class="imageColumn"><img class="image" src="images/First-Person%20Shooter/Everything.PNG"></div>
-     <div class="imageColumn"><img class="image" src="images/First-Person%20Shooter/Guns.PNG"></div>
-     <div class="imageColumn"><img class="image" src="images/First-Person%20Shooter/Player.PNG"></div>
- </div>
-<div class="content w3-container w3-padding-32">
-  <h3 class="w3-center">Another personal project, this first-person shooter features the following concepts:</h3>
-  <h3 class="w3-center">
-      <ul>
-          <li>Damage implementation from bullet interaction</li>
-          <li>AI roaming, approach, and attacking stages</li>
-          <li>Pick-up and drop system</li>
-          <li>Aiming and reloading animations</li>
-          <li>Bindable controls with controller support</li>
-          <li>Sensitivity controls</li>
-          <li>Ammo replenishment</li>
-          <li>Unique abilities</li>
-      </ul>
-  </h3>
+<!-- Image Row (First-Person Shooter Section) -->
+<div class="w3-black imageRow">
+    <div class="imageColumn"><img class="image" src="images/First-Person%20Shooter/Everything.PNG"></div>
+    <div class="imageColumn"><img class="image" src="images/First-Person%20Shooter/Guns.PNG"></div>
+    <div class="imageColumn"><img class="image" src="images/First-Person%20Shooter/Player.PNG"></div>
 </div>
-<video width="67.5%" controls>
-  <source src="videos/FPS%20Finished%20Demo.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+<!-- Content (First-Person Shooter Section) -->
+<div class="content w3-container w3-padding-16">
+  <h3 class="w3-center w3-padding-16">Another personal project, this first-person shooter features the following concepts:</h3>
+    <div class="contentRow">
+        <div class="contentColumn contentLeft">
+            <h3 class="w3-center">
+              <ul>
+                  <li>Damage implementation from bullet interaction</li>
+                  <li>AI roaming, approach, and attacking stages</li>
+                  <li>Pick-up and drop system</li>
+                  <li>Aiming and reloading animations</li>
+                  <li>Bindable controls with controller support</li>
+                  <li>Sensitivity controls</li>
+                  <li>Ammo replenishment</li>
+                  <li>Unique abilities</li>
+              </ul>
+            </h3>
+        </div>
+        <video class="contentColumn contentRight" controls>
+          <source src="videos/FPS%20Finished%20Demo.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+    </div>
+</div>
 
-<!-- Platformer Parallax Image with Text -->
+<!-- Parallax Image (Platformer Section) -->
 <div class="section">
     <div class="bgimg-platformer w3-display-container w3-opacity-min">
       <div class="w3-display-middle">
@@ -204,33 +220,37 @@
       </div>
     </div>
 </div>
-
-<!-- Container (Platformer Section) -->
- <div class="w3-black imageRow">
-     <div class="imageColumn"><img class="image" src="images/Platformer/First%20Level.PNG"></div>
-     <div class="imageColumn"><img class="image" src="images/Platformer/Enemy.PNG"></div>
-     <div class="imageColumn"><img class="image" src="images/Platformer/Moonrock%20and%20Enemy.PNG"></div>
- </div>
-<div class="content w3-container w3-padding-32">
-  <h3 class="w3-center">A student team project, my contributions to this 2D platformer include:</h3>
-  <h3 class="w3-center">
-      <ul>
-          <li>Endless level mode</li>
-          <li>Hostile enemy interaction</li>
-          <li>Score tracking</li>
-          <li>Achievement tracking pop-ups and menu</li>
-          <li>Game object manipulation</li>
-          <li>Auto-scrolling camera</li>
-          <li>Narration</li>
-      </ul>
-  </h3>
+<!-- Image Row (Platformer Section) -->
+<div class="w3-black imageRow">
+    <div class="imageColumn"><img class="image" src="images/Platformer/First%20Level.PNG"></div>
+    <div class="imageColumn"><img class="image" src="images/Platformer/Enemy.PNG"></div>
+    <div class="imageColumn"><img class="image" src="images/Platformer/Moonrock%20and%20Enemy.PNG"></div>
 </div>
-<video width="67.5%" controls>
-  <source src="videos/Platformer%20Demo.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+<!-- Content (Platformer Section) -->   
+<div class="content w3-container w3-padding-16">
+  <h3 class="w3-center w3-padding-16">A student team project, my contributions to this 2D platformer include:</h3>
+    <div class="contentRow">
+        <div class="contentColumn contentLeft">
+            <h3 class="w3-center">
+              <ul>
+                  <li>Endless level mode</li>
+                  <li>Hostile enemy interaction</li>
+                  <li>Score tracking</li>
+                  <li>Achievement tracking pop-ups and menu</li>
+                  <li>Game object manipulation</li>
+                  <li>Auto-scrolling camera</li>
+                  <li>Narration</li>
+              </ul>
+            </h3>
+        </div>
+        <video class="contentColumn contentRight" controls>
+          <source src="videos/Platformer%20Demo.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+    </div>
+</div>
 
-<!-- Contact Parallax Image with Text -->
+<!-- Parallax Image (Contact Section) -->
 <div style="border-top: 10px solid black; border-bottom: 10px solid black;" id="contact">
     <div class="bgimg-contact w3-display-container w3-opacity-min">
       <div class="w3-display-middle">
@@ -239,8 +259,7 @@
       </div>
     </div>
 </div>
-
-<!-- Container (Contact Section) -->
+<!-- Content (Contact Section) -->
 <div class="w3-content w3-container w3-padding-64">
 <img class="w3-center" src="images/Resume.PNG" style="border: 3px solid black; display: block; margin-left: auto; margin-right: auto; width: 70%"><br>
   <!-- Auto width -->
@@ -278,10 +297,11 @@
 </div>
 
 <!-- Footer -->
-<footer class="w3-center w3-black w3-padding-64">
+<footer class="w3-center w3-black w3-padding-32">
   <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
 </footer>
- 
+
+<!-- Script -->
 <script>
 // Modal Image Gallery - UNUSED
 function onClick(element) {

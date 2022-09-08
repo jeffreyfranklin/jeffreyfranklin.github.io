@@ -1,0 +1,69 @@
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+
+.image {
+    max-width: 100%;
+}
+
+.imageRow {
+    display: flex;
+    align-items: center;
+}
+
+/* Clear floats after the columns */
+.imageRow:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Create two equal columns that floats next to each other */
+.imageColumn {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+}
+
+.contentRow {
+    display: flex;
+    align-items: center;
+}
+
+.contentRow:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.contentColumn {
+    float: left;
+}
+
+.contentLeft {
+    width: 40%;
+}
+
+.contentRight {
+    width: 60%;
+}
+
+@media screen and (max-width: 600px) {
+    .imageRow, .contentRow {
+        display: inherit;
+        align-items: inherit;
+    }
+    .column, .imageColumn, .contentLeft, .contentRight {
+        width: 100%;
+    }
+}
