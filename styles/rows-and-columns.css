@@ -38,6 +38,7 @@
 .contentRow {
     display: flex;
     align-items: center;
+    margin-bottom: 64px;
 }
 
 .contentRow:after {
