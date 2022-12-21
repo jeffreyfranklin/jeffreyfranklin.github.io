@@ -1,15 +1,29 @@
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
+section > p {
+    padding: 0px 25vw; 
 }
 
-/* Create two equal columns that floats next to each other */
+@media screen and (max-width: 600px) {
+    section > p {
+        padding: 0px 15vw;
+    }
+}
+
+ul {
+    display: inline-block;
+    text-align: left;
+}
+
 .column {
-    float: left;
-    width: 50%;
-    padding: 10px;
+  text-align: center;
+  float: left;
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .image {
@@ -19,6 +33,7 @@
 .imageRow {
     display: flex;
     align-items: center;
+    background-color: rgb(49, 49, 49);
 }
 
 /* Clear floats after the columns */
@@ -60,6 +75,9 @@
 }
 
 @media screen and (max-width: 600px) {
+    .image {
+        max-width: calc(100% - 20px);
+    }
     .imageRow, .contentRow {
         display: inherit;
         align-items: inherit;

@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
+
+body {
+    background-color: #131316;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.content {
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section {
+    display: grid;
+    place-items: center;
+    align-content: center;
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+@media(prefers-reduced-motion) {
+    .hidden {
+        transition: none;
+    }
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.logos {
+    display: flex;
+}
+
+div .logo {
+    width: 150px;
+    height: 150px;
+    background-color: gray;
+    border-radius: 20px;
+    padding: 1rem;
+    margin: 0 0.5rem;
+}
+
+@media screen and (max-width: 600px) {
+    .logos {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+    
+    div .logo:nth-child(1) {
+        margin: 0px 0px 0px auto;
+    }
+    
+    div .logo:nth-child(2) {
+        margin: 0px auto 0px 0px;
+    }
+    
+    div .logo:nth-child(3) {
+        margin: 0px 0px 0px auto;
+    }
+    
+    div .logo:nth-child(4) {
+        margin: 0px auto 0px 0px;
+    }
+}
+
+.logo:nth-child(2) {
+    transition-delay: 200ms;
+}
+
+.logo:nth-child(3) {
+    transition-delay: 400ms;
+}
+
+.logo:nth-child(4) {
+    transition-delay: 600ms;
+}
+
+ul:nth-child(1) li {
+    transition-delay: calc(100ms * var(--order) - 50ms);
+}
+
+ul:nth-child(2) li {
+    transition-delay: calc(100ms * var(--order));
+}
