@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Poiret+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Bitter:ital,wght@0,100..900;1,100..900&family=Poiret+One&display=swap');
+
+:root {
+    --text-primary: #d4bc7f; /* Wythe Gold */
+    --text-secondary: #e7dec6;
+    --background-primary: #222222; /* Ebony */
+    --background-secondary: #333333;
+}
+
+html {
+    scroll-padding-top: 90px;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: var(--background-primary);
+}
+
+hr {
+    border-top: 1px solid var(--text-primary);
+}
+
+.main {
+    padding: 16px 0px;
+    margin-top: 90px;
+    background: linear-gradient(180deg, #222222 0%, #111111 33%, #222222 66%, #111111 100%);
+    /* Font */
+    font-family: "Atkinson Hyperlegible", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--text-primary);
+}
+
+.main > * {
+    padding: 100px 0px;
+}
+
+.highlight {
+    color: var(--text-secondary);
+    font-weight: bold;
+}
+
+h1 {
+    text-align: center;
+    font-size: 32pt;
+    font-weight: bold;
+    color: var(--text-secondary);
+}
+
+#aboutMe, #professionalWork, #contact {
+    width: 50vw;
+    margin: auto;
+}
+
+#aboutMe h1 {
+    margin: 0px;
+}
+
+#professionalWork h1, #contact h1 {
+    margin: 16px 0px 0px 0px;
+}
+
+.project {
+    padding: 10px 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.project > div {
+    margin: 0px 5px;
+}
+
+.project-info {
+    display: flex;
+    gap: 5px;
+}
+
+.project-name {
+    display: flex;
+    align-items: flex-end;
+    font-size: 32pt;
+    font-weight: bold;
+    color: var(--text-secondary);
+}
+
+.company-name {
+    display: flex;
+    align-items: flex-end;
+    font-size: 18pt;
+    line-height: 28pt;
+}
+
+.other-info {
+    display: flex;
+    gap: 5px;
+    padding-bottom: 5px;
+}
+
+.platforms a {
+    color: var(--text-secondary);
+}
+
+.platforms a:hover {
+    color: var(--text-primary);
+}
+
+.content {
+    margin: 0px !important;
+}
+
+.content p {
+    margin: 0px;
+}
+
+.media {
+    object-fit: cover;
+    margin: 0px 8px 0px 0px;
+    height: 300px;
+    width: 50%;
+    float: left;
+}
+
+.accordionButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    font-size: 15px;
+    transition: 0.4s;
+    border-color: var(--text-primary);
+    border-width: 1px;
+    background-color: var(--background-secondary);
+}
+
+.accordionButton:after {
+    color: var(--text-primary);
+    content: '\25BC';
+    font-weight: bold;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.accordionButton:hover:after {
+    color: var(--text-secondary);
+}
+
+.accordionButton.active:after {
+  content: "\25B2";
+}
+
+.learnings {
+    text-align: center;
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+#contact form {
+    width: 100%;
+}
+
+#contact input, textarea {
+    width: calc(100% - 10px);
+    margin-bottom: 12px;
+    padding: 0px;
+    border-color: var(--text-primary);
+    border-width: 1px;
+    /* Font */
+    font-family: "Atkinson Hyperlegible", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#contact input {
+    height: 33px;
+    padding: 0px 5px;
+}
+
+#contact textarea {
+    height: 150px;
+    padding: 5px;
+    line-height: 1.15;
+}
+
+#contact button {
+    display: block;
+    margin: auto;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 12pt;
+    border-color: var(--text-primary);
+    border-width: 1px;
+    background-color: var(--background-secondary);
+    color: var(--text-primary);
+}
+
+#contact button:hover {
+    color: var(--text-secondary);
+}
+
+@media only screen and (max-width: 1008px) {
+    #aboutMe, #professionalWork, #contact {
+        width: 75vw;
+        margin: auto;
+    }
+    
+    .project-name {
+        font-size: 29pt;
+    }
+
+    .company-name {
+        display: none;
+    }
+    
+    .media {
+        width: 100%;
+        float: none;
+    }
+}

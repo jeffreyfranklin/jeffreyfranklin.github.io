@@ -1,147 +1,253 @@
-:root {
-    font-size: 16px;
-    font-family: 'Open Sans';
-    --text-primary: #b6b6b6;
-    --text-secondary: #ececec;
-    --bg-primary: #23232e;
-    --bg-secondary: #141418;
-    --transition-speed: 600ms;
-}
-
-html {
-    overflow-x: hidden;
-}
-
-main {
-    margin-left: 5rem;
-}
-
 .navbar {
+    background-color: inherit;
+    padding: 14px 16px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 50px;
     position: fixed;
-    background-color: var(--bg-primary);
-    z-index: 3;
-    transition: width 600ms ease;
+    top: 0;
+    width: calc(100% - 32px);
+    z-index: 1;
 }
 
-.navbar-nav {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.nav-item {
-    width: 100%;
-}
-
-.nav-link {
-    display: flex;
-    align-items: center;
-    height: 5rem;
-    color: var(--text-primary);
+.navbar a,
+.navbar .nav-links a {
     text-decoration: none;
-    filter: grayscale(100%) opacity(0.7);
-    transition: var(--transition-speed);
+    /* Font */
+    font-family: "Poiret One", sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    font-style: normal;
+    color: var(--text-primary);
 }
 
-.nav-link:hover {
-    filter: grayscale(0%) opacity(1);
-    background: var(--bg-secondary);
+.navbar a:hover,
+.navbar .nav-links a:hover {
     color: var(--text-secondary);
 }
 
-.link-text {
+.information {
+    display: grid;
+    grid-template-areas:
+        'name'
+        'role';
+}
+
+.name {
+    grid-area: name;
+    font-size: 36px;
+}
+
+.role {
+    grid-area: role;
+    font-size: 18px;
+}
+
+.resume-button {
+    background-color: var(--text-primary);
+    border: 2px solid var(--text-primary);
+    padding: 16px 32px;
+    margin-left: auto;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    font-family: "Poiret One", sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    font-style: normal;
+    color: var(--background-secondary) !important;
+}
+
+.resume-button:hover {
+    background-color: var(--background-secondary);
+    color: var(--text-primary) !important;
+}
+
+.nav-links {
+    display: flex;
+    gap: 50px;
+}
+
+.menu-btn {
     display: none;
-    margin-left: 1rem;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 10px;
 }
 
-.nav-link svg {
-    min-width: 2rem;
-    max-width: 2rem;
-    margin: 0 1.5rem;
+.menu-btn__burger {
+    width: 30px;
+    height: 3px;
+    background-color: var(--text-primary);
+    border-radius: 2px;
+    position: relative;
+    transition: all 0.3s ease-in-out;
 }
 
-.navbar:hover .link-text {
-    display: block;
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: var(--text-primary);
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
 }
 
-.fa-primary {
-    color: #00246E;
+.menu-btn__burger:hover,
+.menu-btn__burger:hover::before,
+.menu-btn__burger:hover::after {
+    background-color: var(--text-secondary);
 }
 
-.fa-secondary {
-    color: #0172D0;
+.menu-btn__burger::before {
+    transform: translateY(-10px);
 }
 
-.fa-primary, .fa-secondary {
-    transition: var(--transition-speed);
+.menu-btn__burger::after {
+    transform: translateY(10px);
 }
 
-.navbar .logo {
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-    text-align: center;
-    color: var(--text-secondary);
-    background: var(--bg-secondary);
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    letter-spacing: 0.3ch;
-    width: 100%;
+/* Active (X) state */
+.menu-btn.open .menu-btn__burger {
+    background-color: transparent;
 }
 
-.navbar .logo svg {
-    transform: rotate(0deg);
-    transition: transform var(--transition-speed);
+.menu-btn.open .menu-btn__burger::before {
+    transform: rotate(45deg);
 }
 
-.navbar:hover .logo svg {
-    transform: rotate(-180deg);
+.menu-btn.open .menu-btn__burger::after {
+    transform: rotate(-45deg);
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 768px) and (max-width: 1008px) {
     .navbar {
-        bottom: 0;
-        width: 100vw;
-        height: 5rem;
+        gap: 15px;
     }
     
-    .navbar .logo {
+    .navbar a,
+    .navbar .nav-links a {
+        font-size: 18px;
+    }
+    
+    .nav-links {
+        gap: 15px;
+    }
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 768px) {
+    .navbar {
+        justify-content: space-between;
+        padding: 10px 16px;
+        min-height: 45px;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
         display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        align-items: flex-start;
+        z-index: 10;
+        gap: 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        display: block;
+        width: 100%;
+        padding: 16px 20px;
+        background-color: var(--background-secondary);
+        border-top: 1px solid var(--text-primary);
+        box-sizing: border-box;
+        
+        opacity: 0;
+        transform: translateY(-20px);
+        animation-fill-mode: forwards;
+        animation-duration: 0.4s;
+        animation-timing-function: ease;
+        pointer-events: none;
     }
     
-    .navbar-nav {
-        flex-direction: row;
+    .nav-links a:hover {
+        background-color: var(--text-primary);
+        color: var(--background-secondary);
     }
     
-    .nav-link {
-        justify-content: center;
+    .nav-links.active a:nth-child(1) {
+        animation-name: fadeSlideIn;
+        animation-delay: 0.1s;
+        pointer-events: auto;
     }
     
-    main {
+    .nav-links.active a:nth-child(2) {
+        animation-name: fadeSlideIn;
+        animation-delay: 0.2s;
+        pointer-events: auto;
+    }
+    
+    .nav-links.active a:nth-child(3) {
+        animation-name: fadeSlideIn;
+        animation-delay: 0.3s;
+        pointer-events: auto;
+    }
+    
+    .nav-links.closing a:nth-child(1) {
+        animation-name: fadeSlideOut;
+        animation-delay: 0.3s;
+        pointer-events: none;
+    }
+    
+    .nav-links.closing a:nth-child(2) {
+        animation-name: fadeSlideOut;
+        animation-delay: 0.2s;
+        pointer-events: none;
+    }
+    
+    .nav-links.closing a:nth-child(3) {
+        animation-name: fadeSlideOut;
+        animation-delay: 0.1s;
+        pointer-events: none;
+    }
+
+    @keyframes fadeSlideIn {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes fadeSlideOut {
+        to {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+    }
+
+    .information {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+
+    .resume-button {
         margin: 0;
-    }
-    
-    .navbar:hover .link-text {
-        display: none;
-    }
-}
-
-@media only screen and (min-width: 600px) {
-    .navbar {
-        top: 0; 
-        width: 5rem;
-        height: 100vh;
-    }
-    
-    .navbar:hover {
-        width: 16rem;
-    }
-    
-    .navbar:hover .link-text {
-        display: inline;
-        transition: opacity var(--transition-speed);
+        font-size: 18px !important;
+        padding: 1px 2px;
     }
 }
