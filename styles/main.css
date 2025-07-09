@@ -123,47 +123,6 @@ h1 {
     float: left;
 }
 
-.accordionButton {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    cursor: pointer;
-    margin-top: 10px;
-    padding: 10px;
-    width: 100%;
-    font-size: 15px;
-    transition: 0.4s;
-    border-color: var(--text-primary);
-    border-width: 1px;
-    background-color: var(--background-secondary);
-}
-
-.accordionButton:after {
-    color: var(--text-primary);
-    content: '\25BC';
-    font-weight: bold;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.accordionButton:hover:after {
-    color: var(--text-secondary);
-}
-
-.accordionButton.active:after {
-  content: "\25B2";
-}
-
-.learnings {
-    text-align: center;
-    padding: 0 18px;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
-}
-
 #contact form {
     width: 100%;
 }
