@@ -244,6 +244,14 @@
         transform: translateX(-50%);
         text-align: center;
     }
+    
+    .name {
+        font-size: 24px;
+    }
+    
+    .role {
+        font-size: 16px;
+    }
 
     .resume-button {
         margin: 0;

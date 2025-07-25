@@ -1,0 +1,90 @@
+#professionalWork > :nth-child(2) {
+    padding: 10px 0px;
+}
+
+.project {
+    padding: 0px 0px 10px 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.project > div {
+    margin: 0px 5px;
+}
+
+.project-info, .other-info {
+    display: flex;
+    gap: 5px;
+}
+
+.project-name {
+    display: flex;
+    align-items: flex-end;
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--text-secondary);
+}
+
+.company-name {
+    display: flex;
+    align-items: flex-end;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.other-info {
+    padding-bottom: 5px;
+}
+
+.misc-info {
+    font-size: 16px;
+}
+
+.platforms {
+    align-content: center;
+}
+
+.platforms a {
+    color: var(--text-secondary);
+}
+
+.platforms a:hover {
+    color: var(--text-primary);
+}
+
+.content, .content p {
+    margin: 0px !important;
+}
+
+.media {
+    object-fit: cover;
+    margin: 0px 8px 0px 0px;
+    height: 300px;
+    width: 50%;
+    float: left;
+}
+
+@media only screen and (max-width: 1008px) {
+    .project-name {
+        font-size: 28px;
+    }
+
+    .company-name {
+        display: none;
+    }
+    
+    .other-info {
+        flex-direction: column;
+    }
+    
+    .misc-info {
+        font-size: 15px;
+    }
+    
+    .media {
+        object-fit: contain;
+        height: inherit;
+        width: 100%;
+        float: none;
+    }
+}
