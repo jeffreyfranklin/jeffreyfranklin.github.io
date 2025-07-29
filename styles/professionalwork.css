@@ -52,7 +52,7 @@
     color: var(--text-primary);
 }
 
-.content, .content p {
+.content, .content > :nth-child(2) {
     margin: 0px !important;
 }
 
